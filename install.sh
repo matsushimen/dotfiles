@@ -15,3 +15,6 @@ cp .vimrc ~
 cp .gvimrc ~
 echo 'tmux' >> ~/.bashrc
 source ~/.bashrc
+git config --global user.email "ukasustam@gmail.com"
+git config --global user.name "matsushimen"
+
