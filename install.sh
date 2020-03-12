@@ -6,7 +6,7 @@ echo 'eval "$(pyenv init -)"' >> ~/.bash_profile
 source ~/.bash_profile
 pyenv install 3.8.2
 pip install --upgrade pip
-pip install prompt-toolkit xonsh
+pip install prompt-toolkit xonsh==0.9.13
 echo 'xonsh' >> ~/.bash_profile
 sudo apt install tmux
 cp .tmux.conf ~
