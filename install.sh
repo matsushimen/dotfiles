@@ -5,10 +5,10 @@ echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bash_profile
 echo 'eval "$(pyenv init -)"' >> ~/.bash_profile
 source ~/.bash_profile
 sudo apt install liblzma-dev
-pyenv install 3.8.2
-pyenv global 3.8.2
+pyenv install 3.8.6
+pyenv global 3.8.6
 pip install --upgrade pip
-pip install prompt-toolkit xonsh==0.9.13 pygments powerline2
+pip install prompt-toolkit xonsh pygments xontrib-powerline2
 echo 'xonsh' >> ~/.bash_profile
 sudo apt install tmux
 cp .tmux.conf ~
