@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+
 # エディタ
 $EDITOR = '/usr/local/bin/vim'
 $VISUAL = '/usr/local/bin/vim'
@@ -25,11 +26,16 @@ $SUPPRESS_BRANCH_TIMEOUT_MESSAGE = True
 # キー入力即評価（サイコー）
 $UPDATE_COMPLETIONS_ON_KEYPRESS = False
 # プロンプトの表記
-$PROMPT = "{GREEN}{gitstatus} $ "
+$PROMPT = "{YELLOW}{cwd_base} $ "
+$RIGHT_PROMPT = "{gitstatus}"
 $BOTTOM_TOOLBER = "{BACKGROUND_WHITE}{INTENSE_RED}{user}{INTENSE_GREEN}@{INTENSE_BLUE}{hostname}{INTENSE_YELLOW} [ {cwd} ]"
 
 # lsコマンドの結果の見た目
 $LS_COLORS="di=34:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30"
+
+# シンタックスハイライト
+#$COLOR_INPUT = True
+#$COLOR_RESULTS = True
 
 # alias
 # OS判別をplatformで
@@ -53,7 +59,8 @@ aliases["vx"] = "vim ~/.xonshrc"
 aliases["vz"] = "vim ~/.zshrc"
 aliases["vv"] = "vim ~/.vimrc"
 aliases["vs"] = "vim ~/.ssh/config"
-
+aliases["pi"] = "ssh pi@192.168.11.7"
+aliases["lpi"] = "lftp sftp://pi@192.168.11.7"
 
 # 履歴をpecoに流す
 # https://qiita.com/riktor/items/4a90b4e125cd091a9d07
@@ -128,3 +135,4 @@ for k,v in lazy_module_dict.items():
     t = "@lazyobject\ndef {}():\n    return importlib.import_module('{}')".format(k, v)
     exec(t)
 
+xontrib load powerline2
